@@ -1,14 +1,19 @@
 import { useState } from 'react'
 import { Header } from "./components/Header";
+import { Footer } from './components/Footer';
+import { Produto } from './components/Produto';
 
 function App() {
-
+  const [produtos, setProdutos] = useState([])
 
   return (
-    <div>
+    <body>
       <Header />
-      <h1>Olho Geek</h1>
-    </div>
+      <main className='bg-fundo'>
+        <Produto />
+      </main>
+      <Footer />
+    </body>
   )
 }
 
