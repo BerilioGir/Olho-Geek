@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Header } from "./components/Header";
 import { Footer } from './components/Footer';
-import { Produto } from './components/Produto';
+import { CardProduto } from './components/CardProduto';
 
 function App() {
   const [produtos, setProdutos] = useState([])
@@ -10,7 +10,7 @@ function App() {
     <body>
       <Header />
       <main className='bg-fundo'>
-        <Produto />
+        <CardProduto />
       </main>
       <Footer />
     </body>
