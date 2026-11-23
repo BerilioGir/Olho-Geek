@@ -18,7 +18,7 @@ export function CardProduto() {
                     </div>
                 </div>
             </div>
-            <div className="flex justify-between items-start">
+            <div className="flex flex-col items-start">
                 <h4 className="text-white font-nunito w-40">Nome Produto</h4>
                 <p className="text-right text-white font-nunito font-extrabold text-2xl ">R$ 40,00</p>
             </div>
