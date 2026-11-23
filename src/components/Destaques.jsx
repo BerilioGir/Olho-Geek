@@ -32,19 +32,13 @@ function BannerDestaqueMobile() {
 
 function DestaquePC() {
     return (
-        <div className="grid grid-cols-3 gap-x-30 gap-y-19 py-20">
+        <div className="grid grid-cols-[repeat(3,max-content)] gap-x-30 gap-y-19 py-20 justify-between">
             <div className="col-span-3">
                 <BannerDestaquePC />
             </div>
-            <div className="justify-self-start">
-                <ProdutoDestaque />
-            </div>
-            <div className="justify-self-center">
-                <ProdutoDestaque />
-            </div>
-            <div className="justify-self-end">
-                <ProdutoDestaque />
-            </div>
+            <ProdutoDestaque />
+            <ProdutoDestaque />
+            <ProdutoDestaque />
         </div>
     )
 }
