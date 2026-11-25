@@ -14,7 +14,7 @@ export function Footer() {
             </div>
             <div className="md:flex md:flex-col md:gap-3 md:items-start md:justify-start flex flex-col gap-3 items-center justify-center ">
                 <h6 className="text-white font-nunito font-bold">Sobre Nós:</h6>
-                <p className="text-white font-nunito font-bold w-full">Muito além de uma loja, a Olho Geek é uma loja de produtos criada para quem vive e respira a cultura geek e pop. Aqui você encontra produtos que representam suas paixões, seu estilo e sua personalidade</p>
+                <p className="text-white font-nunito-sans w-full">Muito além de uma loja, a Olho Geek é uma loja de produtos criada para quem vive e respira a cultura geek e pop. Aqui você encontra produtos que representam suas paixões, seu estilo e sua personalidade.</p>
             </div>
         </footer>
     )

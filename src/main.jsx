@@ -5,10 +5,19 @@ import './index.css'
 
 import App from './App.jsx'
 import Camisetas from './Camisetas.jsx'
+import Moletons from './Moletons.jsx'
+import Acessorios from './Acessorios.jsx'
+import Posters from './Posters.jsx'
+import Personalizados from './Personalizados.jsx'
+
 
 const router = createBrowserRouter([
   { path: "/", element: <App /> },
-  { path: "/camisetas", element: <Camisetas /> }
+  { path: "/camisetas", element: <Camisetas /> },
+  { path: "/moletons", element: <Moletons /> },
+  { path: "/acessorios", element: <Acessorios /> },
+  { path: "/posters", element: <Posters /> },
+  { path: "/personalizados", element: <Personalizados /> }
 ]);
 
 createRoot(document.getElementById('root')).render(
