@@ -4,7 +4,7 @@ export function Footer() {
             <div className="flex justify-between items-center">
                 <img src="./logo.png" alt="" className="h-12.25 w-25"/> 
                 <nav>
-                    <ul className="flex gap-10 items-center">
+                    <ul className="md:flex md:gap-10 md:items-center grid grid-cols-2 gap-3 ml-5">
                         <li className="text-white font-nunito font-bold">Fale Conosco</li>
                         <li className="text-white font-nunito font-bold">Trocas e Devoluções</li>
                         <li className="text-white font-nunito font-bold">Rastrear Pedidos</li>
@@ -12,9 +12,9 @@ export function Footer() {
                     </ul>
                 </nav>
             </div>
-            <div className="flex flex-col gap-3">
+            <div className="md:flex md:flex-col md:gap-3 md:items-start md:justify-start flex flex-col gap-3 items-center justify-center ">
                 <h6 className="text-white font-nunito font-bold">Sobre Nós:</h6>
-                <p className="text-white font-nunito font-bold w-200">Muito além de uma loja, a Olho Geek é uma loja de produtos criada para quem vive e respira a cultura geek e pop. Aqui você encontra produtos que representam suas paixões, seu estilo e sua personalidade</p>
+                <p className="text-white font-nunito font-bold w-full">Muito além de uma loja, a Olho Geek é uma loja de produtos criada para quem vive e respira a cultura geek e pop. Aqui você encontra produtos que representam suas paixões, seu estilo e sua personalidade</p>
             </div>
         </footer>
     )
