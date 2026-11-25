@@ -28,9 +28,8 @@ export function Header() {
             <p className="font-nunito hidden md:block">Menu</p>
           </button>
         </div>
-<<<<<<< HEAD
-      </div>
-      <nav className="flex justify-center pt-8">
+
+      <nav className="pt-8 hidden md:flex md:col-span-3 md:justify-center">
         <ul className="flex flex-row justify-betwen items-center gap-12.5 ">
           <Link to="/camisetas" className="font-nunito text-white text-xl">Camisetas</Link>
           <li className="font-nunito text-white text-xl"><a href="">Moletons</a></li> 
@@ -39,22 +38,6 @@ export function Header() {
           <li className="font-nunito text-white text-xl"><a href="">Personalizados</a></li>
         </ul>
       </nav>
-=======
-
-      {/*menu de navegação, ainda não sei como implementar no mobile como menu hamburger*/ }
-
-      
-        <nav className="pt-8 hidden md:flex md:col-span-3 md:justify-center">
-          <ul className="flex flex-row justify-between items-center gap-12.5 ">
-            <li className="font-nunito text-white text-xl"> <a href="">Camisetas</a> </li>
-            <li className="font-nunito text-white text-xl"><a href="">Moletons</a></li>
-            <li className="font-nunito text-white text-xl"><a href="">Acessórios</a></li>
-            <li className="font-nunito text-white text-xl"><a href="">Posters</a></li>
-            <li className="font-nunito text-white text-xl"><a href="">Personalizados</a></li>
-          </ul>
-        </nav>
-      
->>>>>>> 3908edba42bf732b27880bd8ad691d4c23ffa09b
     </header>
   );
 }
