@@ -2,6 +2,7 @@ import { useState } from "react";
 import { LuShoppingCart } from "react-icons/lu";
 import { FaRegUser } from "react-icons/fa";
 import { TiThMenu } from "react-icons/ti";
+import { Link } from "react-router-dom"
 
 export function Header() {
   return (
@@ -25,7 +26,7 @@ export function Header() {
       </div>
       <nav className="flex justify-center pt-8">
         <ul className="flex flex-row justify-betwen items-center gap-12.5 ">
-          <li className="font-nunito text-white text-xl"> <a href="">Camisetas</a> </li>
+          <Link to="/camisetas" className="font-nunito text-white text-xl">Camisetas</Link>
           <li className="font-nunito text-white text-xl"><a href="">Moletons</a></li> 
           <li className="font-nunito text-white text-xl"><a href="">Acessórios</a></li>
           <li className="font-nunito text-white text-xl"><a href="">Posters</a></li>
