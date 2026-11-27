@@ -37,7 +37,7 @@ export function Header() {
             <li className="font-nunito text-white text-xl"><a href="">Moletons</a></li>
             <li className="font-nunito text-white text-xl"><a href="">Acessórios</a></li>
             <li className="font-nunito text-white text-xl"><a href="">Posters</a></li>
-            <li className="font-nunito text-white text-xl"><a href="">Personalizados</a></li>
+            {/*<li className="font-nunito text-white text-xl"><a href="">Personalizados</a></li>*/}
           </ul>
         </nav>
       

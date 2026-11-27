@@ -1,37 +1,53 @@
+import { useEffect, useState } from "react";
 import { CardProduto } from "./CardProduto";
+import { API_URL } from "../api";
 
 export function Produtos() {
+    const [produtos, setProdutos] = useState([]);
+    const [erro, setErro] = useState(false);
+
+    useEffect(() => {
+        fetch(`${API_URL}/produtos`)
+            .then((resposta) => resposta.json())
+            .then((dados) => setProdutos(dados))
+            .catch(() => setErro(true));
+    }, []);
+
     return (
         <div>
+            {erro && (
+                <p className="text-center text-white font-nunito py-6">
+                    Não foi possível carregar os produtos. A API está rodando? (npm run api)
+                </p>
+            )}
+
             <div className="block md:hidden">
-                <ProdutosMobile />
+                <ProdutosMobile produtos={produtos} />
             </div>
 
             <div className="hidden md:block">
-                <ProdutosPC />
+                <ProdutosPC produtos={produtos} />
             </div>
         </div>
     )
 }
 
-function ProdutosMobile() {
+function ProdutosMobile({ produtos }) {
     return (
         <div className="flex flex-col gap-10 items-center py-12">
             <h1 className="text-[2rem] font-nunito text-white font-bold">Todos os Produtos</h1>
-            <GridProdutosMobile />
+            <GridProdutosMobile produtos={produtos} />
             <SeletorPaginaMobile/>
         </div>
     )
 }
-function GridProdutosMobile() {
+
+function GridProdutosMobile({ produtos }) {
     return (
-        <div className="grid grid-cols-1 grid-rows-6 gap-y-15">
-            <CardProduto />
-            <CardProduto />
-            <CardProduto />
-            <CardProduto />
-            <CardProduto />
-            <CardProduto />
+        <div className="grid grid-cols-1 gap-y-15">
+            {produtos.map((produto) => (
+                <CardProduto key={produto.id} produto={produto} />
+            ))}
         </div>
     )
 }
@@ -49,7 +65,7 @@ function SeletorPaginaMobile() {
     )
 }
 
-function ProdutosPC() {
+function ProdutosPC({ produtos }) {
     return (
         <div className="py-20 flex flex-col gap-9">
             <div className="flex items-center justify-between">
@@ -58,31 +74,18 @@ function ProdutosPC() {
                     <option value="">Filtrar</option>
                 </select>
             </div>
-            <GridProdutosPC/>
+            <GridProdutosPC produtos={produtos} />
             <SeletorPaginaPC/>
         </div>
     )
 }
 
-function GridProdutosPC() {
+function GridProdutosPC({ produtos }) {
     return (
-        <div className="grid grid-cols-[repeat(4,max-content)] grid-rows-4 gap-y-20 justify-between">
-            <CardProduto />
-            <CardProduto />
-            <CardProduto />
-            <CardProduto />
-            <CardProduto />
-            <CardProduto />
-            <CardProduto />
-            <CardProduto />
-            <CardProduto />
-            <CardProduto />
-            <CardProduto />
-            <CardProduto />
-            <CardProduto />
-            <CardProduto />
-            <CardProduto />
-            <CardProduto />
+        <div className="grid grid-cols-[repeat(4,max-content)] gap-y-20 justify-between">
+            {produtos.map((produto) => (
+                <CardProduto key={produto.id} produto={produto} />
+            ))}
         </div>
     )
 }

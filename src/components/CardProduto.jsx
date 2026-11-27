@@ -1,11 +1,13 @@
 import { CiHeart } from "react-icons/ci";
 
-export function CardProduto() {
+export function CardProduto({ produto }) {
     return (
         <div className="flex flex-col w-66 gap-1">
 
             <div tabIndex={0} className="bg-white w-66 h-78.5 rounded-xl group relative overflow-hidden">
-                <img src="" alt="Produto" className="absolute inset-0 w-full h-full" />
+                {produto.imagem && (
+                    <img src={produto.imagem} alt={produto.nome} className="absolute inset-0 w-full h-full object-cover" />
+                )}
 
                 <div className="absolute inset-0 flex items-center justify-center bg-black/50 opacity-0 transition duration-300 group-focus-within:opacity-100 group-focus-within:pointer-events-auto md:group-hover:opacity-100 md:group-hover:pointer-events-auto">
                     <div className="flex items-center gap-2">
@@ -19,8 +21,8 @@ export function CardProduto() {
                 </div>
             </div>
             <div className="flex flex-col items-start">
-                <h4 className="text-white font-nunito w-40">Nome Produto</h4>
-                <p className="text-right text-white font-nunito font-extrabold text-2xl ">R$ 40,00</p>
+                <h4 className="text-white font-nunito w-40">{produto.nome}</h4>
+                <p className="text-right text-white font-nunito font-extrabold text-2xl ">{produto.preco.toLocaleString("pt-BR", { style: "currency", currency: "BRL" })}</p>
             </div>
         </div>
     )
