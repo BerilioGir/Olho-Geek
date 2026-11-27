@@ -1,0 +1,86 @@
+{
+  "produtos": [
+    {
+      "id": 1,
+      "nome": "Camiseta Naruto",
+      "preco": 59.9,
+      "categoria": "Camisetas",
+      "imagem": "",
+      "descricao": "Camiseta amarela de algodão com estampa naruto."
+    },
+    {
+      "id": 2,
+      "nome": "Camiseta Game Of Thrones",
+      "preco": 64.9,
+      "categoria": "Camisetas",
+      "imagem": "",
+      "descricao": "Camiseta com estampa de game of thrones."
+    },
+    {
+      "id": 3,
+      "nome": "Moletom My Hero Academia",
+      "preco": 149.9,
+      "categoria": "Moletons",
+      "imagem": "",
+      "descricao": "Moletom com capuz e estampa de My Hero Academia."
+    },
+    {
+      "id": 4,
+      "nome": "Moletom Pac Man",
+      "preco": 139.9,
+      "categoria": "Moletons",
+      "imagem": "",
+      "descricao": "Moletom cinza com estampa pixel art de Pac Man."
+    },
+    {
+      "id": 5,
+      "nome": "Caneca Gamer at Work",
+      "preco": 39.9,
+      "categoria": "Acessórios",
+      "imagem": "",
+      "descricao": "Caneca de cerâmica 300ml para gamers trabalhadors."
+    },
+    {
+      "id": 6,
+      "nome": "Chaveiro KPop",
+      "preco": 19.9,
+      "categoria": "Acessórios",
+      "imagem": "",
+      "descricao": "Chaveiro de metal com design do seu artista de KPop favorito."
+    },
+    {
+      "id": 7,
+      "nome": "Poster Star Wars",
+      "preco": 29.9,
+      "categoria": "Posters",
+      "imagem": "",
+      "descricao": "Poster A3 com arte de Star Wars."
+    },
+    {
+      "id": 8,
+      "nome": "Camiseta Personalizada",
+      "preco": 79.9,
+      "categoria": "Personalizados",
+      "imagem": "",
+      "descricao": "Camiseta com a arte que você escolher."
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "produtoId": 1,
+      "nome": "João",
+      "nota": 5,
+      "comentario": "some comment"
+      
+    },
+    {
+      "id": 2,
+      "produtoId": 1,
+      "nome": "João",
+      "nota": 4,
+      "comentario": "Estampa bonita, tamanho um pouco grande."
+    }
+  ]
+  
+}
