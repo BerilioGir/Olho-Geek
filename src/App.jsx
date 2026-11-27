@@ -8,14 +8,14 @@ function App() {
   const [produtos, setProdutos] = useState([])
 
   return (
-    <div>
+    <>
       <Header />
       <main className='bg-fundo md:px-[12%]'>
         <Destaque/>
         <Produtos />
       </main>
       <Footer />
-    </div>
+    </>
   )
 }
 
